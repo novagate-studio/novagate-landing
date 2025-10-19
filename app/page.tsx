@@ -1,103 +1,115 @@
-import Image from "next/image";
-
+import BlackMythWukongPoster from '@/assets/games/black-myth-wukong-poster.jpg'
+import Logo from '@/assets/logo/PNG_WHITE.png'
+import classNames from 'classnames'
+import { ChevronsDown, KeyIcon, SparkleIcon, ZapIcon } from 'lucide-react'
+import { Goldman } from 'next/font/google'
+import Image from 'next/image'
+import Game from './components/game'
+const goldManFont = Goldman({
+  weight: ['400', '700'],
+})
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <div className='relative z-10' id='hero-section'>
+        <video
+          src={'/assets/videos/hero_video.webm'}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className='w-full h-full object-cover absolute inset-0'>
+          Your browser does not support the video tag.
+        </video>
+        <div className='w-screen h-[calc(100vh-2rem)] items-center relative bg-black/30 flex flex-col justify-center text-white px-4'>
+          <Image src={Logo} alt='NovaGate Logo' width={150} height={50} className='h-56 md:h-64 w-auto' />
+          <h1 className={classNames(goldManFont.className, 'font-medium md:text-xl text-center')}>
+            Không chỉ là trò chơi, đây còn là một thế giới huyền bí
+          </h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <ChevronsDown className='absolute bottom-4 left-1/2 text-primary size-10 animate-bounce-slow opacity-80 hover:opacity-40 transition-opacity duration-300' />
+      </div>
+      <Game />
+      <div className='px-4 mt-14 lg:mt-28'>
+        <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10'>
+          <div className='lg:col-span-2'>
+            <div className='italic lg:text-lg'>Sứ mệnh của chúng tôi</div>
+            <h1 className='text-3xl md:text-5xl lg:leading-tight font-bold text-yellow-600'>
+              Không chỉ là trò chơi, đây còn là một trải nghiệm
+            </h1>
+          </div>
+          <div className='space-y-10 lg:col-span-3 lg:text-lg'>
+            <div className='flex gap-4'>
+              <div className='w-10 h-10 lg:w-14 lg:h-14 rounded-full border border-yellow-600 shrink-0 grid place-items-center'>
+                <KeyIcon className='text-yellow-600 size-4 lg:size-6' />
+              </div>
+              <div>
+                <div className='font-bold text-xl lg:text-2xl'>Bảo mật thông tin</div>
+                <div className=''>Toàn bộ thông tin cá nhân của người chơi đều được bảo mật và an toàn.</div>
+              </div>
+            </div>
+            <div className='flex gap-4'>
+              <div className='w-10 h-10 lg:w-14 lg:h-14 rounded-full border border-yellow-600 shrink-0 grid place-items-center'>
+                <ZapIcon className='text-yellow-600 size-4 lg:size-6' />
+              </div>
+              <div>
+                <div className='font-bold text-xl lg:text-2xl'>Nhanh chóng, chuyên nghiệp</div>
+                <div>Chúng tôi cam kết mang đến trải nghiệm người dùng nhanh chóng và chuyên nghiệp nhất.</div>
+              </div>
+            </div>
+            <div className='flex gap-4'>
+              <div className='w-10 h-10 lg:w-14 lg:h-14 rounded-full border border-yellow-600 shrink-0 grid place-items-center'>
+                <SparkleIcon className='text-yellow-600 size-4 lg:size-6' />
+              </div>
+              <div>
+                <div className='font-bold text-xl lg:text-2xl'>Hệ sinh thái đa dạng</div>
+                <div>Chúng tôi xây dựng một hệ sinh thái trò chơi đa dạng, phong phú và hấp dẫn.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='px-4 mt-32 lg:mt-56'>
+        <div className='max-w-7xl mx-auto'>
+          <h1 className='text-3xl md:text-5xl lg:leading-tight font-bold text-yellow-600'>
+            Đem lại sự hài lòng tuyệt đối cho mọi game thủ, kể cả những người khó tính nhất
+          </h1>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7 lg:gap-10 mt-4 md:mt-10 lg:mt-16 lg:text-lg'>
+            <div className='sm:row-span-3'>
+              <Image
+                src={BlackMythWukongPoster}
+                alt='Black Myth Wukong Poster'
+                className='w-full h-auto rounded-lg shadow-lg'
+              />
+            </div>
+            <div>
+              <h2 className='font-bold text-yellow-600 text-xl lg:text-2xl lg:mb-3'>Tầm Nhìn</h2>
+              <p>
+                Tầm nhìn của chúng tôi là trở thành địa chỉ hàng đầu cho trải nghiệm trò chơi trực tuyến, với sự đa dạng
+                phong phú và chất lượng hàng đầu, mang lại niềm vui và hứng thú cho người chơi.
+              </p>
+            </div>
+            <div>
+              <h2 className='font-bold text-yellow-600 text-xl lg:text-2xl lg:mb-3'>Sứ Mệnh</h2>
+              <p>
+                Đối với chúng tôi, sứ mệnh không chỉ là cung cấp trò chơi trực tuyến, mà còn là mở ra cánh cửa của sự
+                sáng tạo và khám phá.
+              </p>
+            </div>
+            <div className='lg:col-span-2'>
+              <h2 className='font-bold text-yellow-600 text-xl lg:text-2xl lg:mb-3'>Chiến Lược</h2>
+              <p>
+                Chiến lược của chúng tôi là tạo ra một nền tảng trò chơi trực tuyến đa dạng và phong phú, kết hợp giữa
+                sự sáng tạo, công nghệ tiên tiến và sự tận tâm đến từng chi tiết. Chúng tôi cam kết cung cấp những trò
+                chơi chất lượng cao, đa dạng về thể loại và phong cách, đồng thời liên tục cải tiến và nâng cao trải
+                nghiệm người dùng để đáp ứng nhu cầu đa dạng của cộng đồng game thủ. Bằng cách này, chúng tôi hy vọng
+                tạo ra một môi trường trò chơi trực tuyến thú vị và hấp dẫn nhất, nơi mà mọi người có thể tận hưởng niềm
+                đam mê chung và kết nối với nhau qua trò chơi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
