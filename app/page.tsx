@@ -21,7 +21,7 @@ export default function Home() {
           className='w-full h-full object-cover absolute inset-0'>
           Your browser does not support the video tag.
         </video>
-        <div className='w-screen h-[calc(100vh-2rem)] items-center relative bg-black/30 flex flex-col justify-center text-white px-4'>
+        <div className='w-screen h-[calc(100vh-2rem)] items-center relative bg-black/20 flex flex-col justify-center text-white px-4'>
           <Image src={Logo} alt='NovaGate Logo' width={150} height={50} className='h-56 md:h-64 w-auto' />
           <h1 className={classNames(goldManFont.className, 'font-medium md:text-xl text-center')}>
             Không chỉ là trò chơi, đây còn là một thế giới huyền bí
