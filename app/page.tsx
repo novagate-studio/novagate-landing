@@ -1,4 +1,4 @@
-import BlackMythWukongPoster from '@/assets/games/black-myth-wukong-poster.jpg'
+import Poster from '@/assets/games/banner1.jpg'
 import Logo from '@/assets/logo/PNG_WHITE.png'
 import classNames from 'classnames'
 import { ChevronsDown, KeyIcon, SparkleIcon, ZapIcon } from 'lucide-react'
@@ -77,9 +77,9 @@ export default function Home() {
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7 lg:gap-10 mt-4 md:mt-10 lg:mt-16 lg:text-lg'>
             <div className='sm:row-span-3'>
               <Image
-                src={BlackMythWukongPoster}
+                src={Poster}
                 alt='Black Myth Wukong Poster'
-                className='w-full h-auto rounded-lg shadow-lg'
+                className='w-full h-auto rounded-lg shadow-lg aspect-[9/12] object-cover'
               />
             </div>
             <div>
