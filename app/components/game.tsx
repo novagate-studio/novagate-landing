@@ -1,7 +1,7 @@
 'use client'
 import Game1Thumb from '@/assets/games/g1.jpg'
 import Backdrop from '@/assets/images/bg1.jpg'
-import Game1Logo from '@/assets/logo/logo-thiendinhkiem.png'
+import Game1Logo from '@/assets/logo/logo-game1.png'
 import '@/styles/embla.css'
 import classNames from 'classnames'
 import useEmblaCarousel from 'embla-carousel-react'
@@ -57,7 +57,7 @@ const Game = () => {
                 <div className='rounded-xl overflow-hidden border-4 border-primary relative'>
                   <Image src={game.image} alt={game.title} className='w-full h-full aspect-video object-cover' />
                   <div className='absolute bottom-0 left-0 pb-5 w-full h-2/3 bg-gradient-to-t from-black to-transparent flex flex-col justify-end items-center gap-2'>
-                    <Image src={game.logo} alt={`${game.title} Logo`} className='h-24 w-auto' />
+                    <Image src={game.logo} alt={`${game.title} Logo`} className='h-auto w-36' />
                     <p className='text-white text-xs text-center px-4 max-w-sm'>{game.description}</p>
                   </div>
                 </div>
