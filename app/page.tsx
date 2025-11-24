@@ -29,7 +29,7 @@ export default function Home() {
         </div>
         <ChevronsDown className='absolute bottom-4 left-1/2 text-primary size-10 animate-bounce-slow opacity-80 hover:opacity-40 transition-opacity duration-300' />
       </div>
-      <Game />
+      {/* <Game /> */}
       <div className='px-4 mt-14 lg:mt-28'>
         <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10'>
           <div className='lg:col-span-2'>
